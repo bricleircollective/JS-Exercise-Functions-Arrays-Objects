@@ -257,12 +257,22 @@ return oldCars
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
+let germanCars = [];
   for (let i=0; i < inventory.length; i++) {
-    if (inventory[i].car_make != 'Audi' || 'Mercedes-Benz' || 'Volkswagen' || 'BMW') {
-    inventory.pop([i])
+    if (inventory[i].car_make === 'Audi') {
+    germanCars.push(inventory[i])
+    }
+    if (inventory[i].car_make === 'Mercedes-Benz') {
+      germanCars.push(inventory[i])
+    }
+    if (inventory[i].car_make === 'Volkswagen') {
+      germanCars.push(inventory[i])
+    }
+    if (inventory[i].car_make === 'BMW') {
+      germanCars.push(inventory[i])
     }
   }
-return inventory
+return germanCars
 }
 
 /**
